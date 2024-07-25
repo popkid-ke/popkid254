@@ -165,7 +165,7 @@ setTimeout(() => {
             
             var dev = [dj, dj2,dj3,luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\t [][]...{Scene-Md}...[][]");
+            console.log("\t [][]...{popkid-Md}...[][]");
             console.log("=========== New message ===========");
             if (verifGroupe) {
                 console.log("message sent from : " + nomGroupe);
@@ -428,7 +428,7 @@ function mybotpic() {
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
-                                        pack: 'Beltah-Md',
+                                        pack: 'POPKID-Md',
                                         author: conf.OWNER_NAME,
                                         type: StickerTypes.FULL,
                                         categories: ['🤩', '🎉'],
@@ -526,7 +526,7 @@ function mybotpic() {
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
             const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
-                pack: 'Beltah-Md',
+                pack: 'POPKID-Md',
                 author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
@@ -663,7 +663,7 @@ zk.ev.on('group-participants.update', async (group) => {
     try {
         ppgroup = await zk.profilePictureUrl(group.id, 'image');
     } catch {
-        ppgroup = 'https://telegra.ph/file/305827be2080296d1ab2d.jpg';
+        ppgroup = 'https://telegra.ph/file/cca601937f360a820f5d2.jpg';
     }
 
     try {
@@ -684,7 +684,7 @@ zk.ev.on('group-participants.update', async (group) => {
 ╚════◇◇◇═════╝
 ◇ *Descriptioon*   ◇
 
-${metadata.desc}\n\n> POWERED BY BELTAH TECH TEAM.`;
+${metadata.desc}\n\n> POWERED BY POPKID TECH TEAM.`;
 
             zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
@@ -812,23 +812,23 @@ ${metadata.desc}\n\n> POWERED BY BELTAH TECH TEAM.`;
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️ Scene md connecting in your account...");
+                console.log("ℹ️ POPKID md connecting in your account...");
             }
             else if (connection === 'open') {
-                console.log("✅ Scene md connected successfully☺️");
+                console.log("✅ POPKID md connected successfully☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log("Scene Md by Beltah installing cmds😇\n\n");
+                console.log("POPKID254 Md by POPKID installing cmds😇\n\n");
                 //chargement des commandes 
                 console.log("chargement des commandes ...\n");
                 fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
                             require(__dirname + "/commandes/" + fichier);
-                            console.log(fichier + "Successfully installed Scene md commands✔️");
+                            console.log(fichier + "Successfully installed POPKID md commands✔️");
                         }
                         catch (e) {
                             console.log(`${fichier} n'a pas pu être chargé pour les raisons suivantes : ${e}`);
@@ -848,19 +848,19 @@ ${metadata.desc}\n\n> POWERED BY BELTAH TECH TEAM.`;
                 else {
                     md = "undefined";
                 }
-                console.log("Scene md successfully connected✅");
+                console.log("POPKID md successfully connected✅");
 
                 await activateCrons();
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
-                let cmsg = `★ SCENE MD IS RUNNING NOW ★
+                let cmsg = `★ POPKID MD IS RUNNING NOW ★
     
     Prefix : [ ${prefixe} ]
     Mode :${md} mode
     Total Command : ${evt.cm.length}
-    Owner : Beltah Tech 254 🇰🇪  
+    Owner : POPKID Tech 254 🇰🇪  
 
-> THANK YOU FOR LOVING SCENE-MD.\n`;
+> THANK YOU FOR LOVING POPKID-MD.\n`;
                 await zk.sendMessage( zk.user.id, { text: cmsg });
                 }
             }
@@ -874,7 +874,7 @@ ${metadata.desc}\n\n> POWERED BY BELTAH TECH TEAM.`;
                     main();
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.connectionLost) {
-                    console.log('connection error😞 ,,beltah trying to reconnect... ');
+                    console.log('connection error😞 ,,POPKID trying to reconnect... ');
                     main();
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason?.connectionReplaced) {
